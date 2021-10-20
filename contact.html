@@ -46,16 +46,16 @@
     <a href="mailto:lanceodonnell@hotmail.com">E-mail me at lanceodonnell@hotmail.com</a><br>
   </div>
 
-  <div align="center">
+  <div class="contact-message">
   <h3>Send me a message</h3>
-    <form action="" method="post" id="contact-form">
-      <label class="standard-label" for="contact-email">Email: </label>
-      <input type="email" id="contact-email" required>
-      <label for="my-input">Telephone:</label>
+    <form action="mailto:lanceodonnell@hotmail.com" method="post" id="contact-form">
+      <label for"email" class="form-text"> Email*: </label>
+      <input type="email" required id="contact-email">
+      <label for="telephone" class="form-text"> Telephone:</label>
       <input type="tel">
-      <label class="standard-label">Message: </label>
-      <textarea required maxlength="240"></textarea>
-      <input type="submit" value="Send message">
+      <label for="message" class="form-text">Message*: </label>
+      <textarea required maxlength="240" class="message-box"></textarea>
+      <input type="submit" value="Send Message" id="message">
     </form>
   </div>
 
