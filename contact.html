@@ -12,10 +12,9 @@
 </head>
 
 <body>
-
   <!-- Header includes logo and navigation-->
   <header class="page-header">
-    <img src="img/Simple Logo.png" alt="Simple logo" class="page-header__logo">
+    <img src="img/Simple_Logo.png" alt="Simple logo" class="page-header__logo">
     <div class="sidenav">
       <ul role="menubar" class="navigation-list">
         <li role="presentation">
@@ -34,24 +33,25 @@
     </div>
   </header>
 
-  <div align="center">
+  <div class="center-photo">
     <!-- scenic photo -->
-    <img src="img/Steamboat Ski Photo 1.jpg" class="Steamboat__photo" alt="Scenic Photo">
+    <img src="img/Steamboat_Ski_Photo_1.jpg" class="Steamboat__photo" alt="Scenic Photo">
+  </div>
 
-  <div align="center">
-    <h1>Contact</h1>
-    Steamboat Springs, Colorado <br>
+  <div>
+    <h1 style="text-align: center;">Contact</h1>
+    <p style="text-align: center;">Steamboat Springs, Colorado <br>
     <a href="mailto:lanceodonnell@hotmail.com">E-mail me at lanceodonnell@hotmail.com</a><br>
   </div>
 
   <div class="contact-message">
-  <h3>Send me a message</h3>
+  <h3 style="text-align: center;">Send me a message</h3>
     <form action="mailto:lanceodonnell@hotmail.com" method="post" id="contact-form">
-      <label for"email" class="form-text"> Email*: </label>
-      <input type="email" required id="contact-email">
-      <label for="telephone" class="form-text"> Telephone:</label>
+      <label class="standard-label">Email*: </label>
+      <input type="email" required>
+      <label class="standard-label"> Telephone:</label>
       <input type="tel">
-      <label for="message" class="form-text">Message*: </label>
+      <label class="standard-">Message*: </label>
       <textarea required maxlength="240" class="message-box"></textarea>
       <input type="submit" value="Send Message" id="message">
     </form>

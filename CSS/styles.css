@@ -29,11 +29,6 @@ a:hover, a:focus {
 		text-decoration: none;
 }
 
-{
-/* currently not defining anything right now */
-  box-sizing: border-box;
-}
-
 h1  {
   font-size: 40px;
   color:  var(--headings);
@@ -96,7 +91,6 @@ body	{
   }
 
 footer {
-	font-weight: 500px;
 	font-size: 20px;
 	line-height: 0.2;
 }
@@ -104,10 +98,9 @@ footer {
 button,
 .button {
   /* overwrites browser defaults, resets the border and sets styles for the type="button" and class="button"*/
-  border: none;
   font-family: inherit;
   background-color: #ffd24b;
-  color: #black;
+  color: #000;
   text-decoration: none;
   padding: 10px;
   border-radius: 10px;
@@ -142,17 +135,27 @@ button:focus,
   border-radius: 20%;
 }
 
+.Steamboat__photo  {
+  padding: 20px;
+  border-radius: 25%;
+}
+
+.center-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.linkedin-link  {
+  display: flex;
+  justify-content: center;
+}
+
 .page-footer {
   clear: both;
   display: flex;
   flex-direction: column;
   align-items: center;
-	margin-top: px;
-}
-
-.Steamboat__photo  {
-  padding: 20px;
-  border-radius: 25%;
+	margin-top: 20px;
 }
 
 form {
@@ -191,6 +194,11 @@ form {
 	transition: .5s;
 }
 
+.table  {
+  display: flex;
+  justify-content: center;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -199,6 +207,7 @@ form {
 
 .project-grid__item {
   background-color: #cfe2f3;
+  text-align: center;
 }
 
 .Scenic__photo  {
@@ -214,7 +223,6 @@ form {
   display: flex;
   justify-content: center;
 }
-
 
 .sun {
   animation: 4s color-change infinite alternate linear;
