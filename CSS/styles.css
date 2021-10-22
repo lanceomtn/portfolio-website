@@ -195,6 +195,7 @@ form {
 }
 
 .table  {
+  padding: 25px;
   display: flex;
   justify-content: center;
 }
@@ -224,21 +225,47 @@ form {
   justify-content: center;
 }
 
+@keyframes color-change {
+  0% {
+    fill: #ffff00;
+  }
+  50% {
+    fill: #ffff44;
+  }
+  100% {
+    fill: #f6b618;
+  }
+}
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
 
-  @keyframes color-change {
-    0% {
-      fill: #ffffff;
-    }
-    50% {
-      fill: #ffff44;
-    }
-    100% {
-      fill: #f6b618;
-    }
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
   }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
 
 @media all and (max-width: 500px) {
   .grid {
