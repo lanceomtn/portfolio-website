@@ -26,12 +26,6 @@ a:hover, a:focus {
 		text-decoration: none;
 }
 
-{
-/* currently not defining anything right now */
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 h1  {
   font-size: 40px;
   color:  #cc0000;
@@ -49,6 +43,14 @@ h3  {
   color:  #cc0000;
 }
 
+body	{
+  background-color:  #dfdfdf;
+  font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+  line-height: 1.6;
+  }
+
 .page-header  {
   display:  -webkit-box;
   display:  -ms-flexbox;
@@ -65,11 +67,15 @@ h3  {
   height: 150px;
 }
 
-.page-header .page-header__item:last-child {
-  /* nothing currently assigned to this class leaving as a placeholder */
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+.main-navigation page-header__item  {
+  /* nothing currently assigned to this class replace with sidnav */
+}
+
+.sidenav  {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 25px
 }
 
 .navigation-list {
@@ -82,22 +88,13 @@ h3  {
           flex-direction: column;
   list-style: none;
   font-size: 18px;
-  }
-
+  text-align: right;
+}
 .navigation-list li {
   display: inline-block;
   }
 
-body	{
-  background-color:  #dfdfdf;
-  font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-  line-height: 1.6;
-  }
-
 footer {
-	font-weight: 500px;
 	font-size: 20px;
 	line-height: 0.2;
 }
@@ -105,10 +102,9 @@ footer {
 button,
 .button {
   /* overwrites browser defaults, resets the border and sets styles for the type="button" and class="button"*/
-  border: none;
   font-family: inherit;
   background-color: #ffd24b;
-  color: #ffffff;
+  color: #000;
   text-decoration: none;
   padding: 10px;
   border-radius: 10px;
@@ -143,6 +139,29 @@ button:focus,
   border-radius: 20%;
 }
 
+.Steamboat__photo  {
+  padding: 20px;
+  border-radius: 25%;
+}
+
+.center-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.linkedin-link  {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .page-footer {
   clear: both;
   display: -webkit-box;
@@ -155,12 +174,62 @@ button:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-	margin-top: 75px;
+	margin-top: 20px;
 }
 
-.Steamboat__photo  {
-  padding: 20px;
-  border-radius: 25%;
+form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	height: 400px;
+	max-width: 350px;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	border-radius: 7px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-text {
+	color: black;
+	padding: 12px 16px;
+	font-weight: bold;
+}
+
+.message-box {
+	height: 200px;
+	width: 250px;
+}
+
+#message {
+	background-color: #ffd24b;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	margin:0;
+	padding: 12px 16px;;
+	cursor: pointer;
+	margin-top: 35px;
+	color: black;
+	font-weight: bold;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+
+.table  {
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .project-grid {
@@ -173,6 +242,7 @@ button:focus,
 
 .project-grid__item {
   background-color: #cfe2f3;
+  text-align: center;
 }
 
 .Scenic__photo  {
@@ -193,37 +263,88 @@ button:focus,
           justify-content: center;
 }
 
+@-webkit-keyframes color-change {
+  0% {
+    fill: #ffff00;
+  }
+  50% {
+    fill: #ffff44;
+  }
+  100% {
+    fill: #f6b618;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #ffff00;
+  }
+  50% {
+    fill: #ffff44;
+  }
+  100% {
+    fill: #f6b618;
+  }
+}
 
 .sun {
   -webkit-animation: 4s color-change infinite alternate linear;
           animation: 4s color-change infinite alternate linear;
 }
 
-  @-webkit-keyframes color-change {
-    0% {
-      fill: #ffffff;
-    }
-    50% {
-      fill: #fff44;
-    }
-    100% {
-      fill: #f6b618;
-    }
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
-
-  @keyframes color-change {
-    0% {
-      fill: #ffffff;
-    }
-    50% {
-      fill: #fff44;
-    }
-    100% {
-      fill: #f6b618;
-    }
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
+}
 
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
 
+.cloud-front {
+  -webkit-animation: 30s cloud-move infinite alternate linear;
+          animation: 30s cloud-move infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+          animation: 34s cloud-move-reverse infinite alternate linear;
+}
 
 @media all and (max-width: 500px) {
   .grid {
@@ -231,12 +352,14 @@ button:focus,
     grid-template-columns: 1fr;
   }
 }
+
 @media all and (min-width: 500px) and (max-width: 750px){
   .grid {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
