@@ -124,7 +124,7 @@ button:focus,
 
 .casual__portrait {
   float: left;
-  margin-right: 40px;
+  padding: 20px;
   border-radius: 20%;
 }
 
@@ -138,7 +138,14 @@ button:focus,
   justify-content: center;
 }
 
+.about {
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center;
+}
+
 .linkedin-link {
+  clear: both;
   display: flex;
   justify-content: center;
 }
@@ -206,12 +213,6 @@ form {
 
 .Scenic__photo {
   border-radius: 25%;
-}
-
-.about {
-  margin: auto;
-  width: 800px;
-  text-align: left;
 }
 
 .svg-center {
