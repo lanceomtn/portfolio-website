@@ -87,6 +87,10 @@ footer {
   line-height: 0.2;
 }
 
+.icon {
+  padding: 5px;
+}
+
 button,
 .button {
   /* overwrites browser defaults, resets the border and sets styles for the type="button" and class="button" */
@@ -209,6 +213,7 @@ form {
 .project-grid__item {
   background-color: #cfe2f3;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .Scenic__photo {
